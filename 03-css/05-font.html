@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>font | css</title>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Sixtyfour+Convergence&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <style>
+      /* reset */
+      html,
+      body {
+        font-size: 16px;
+        /* 크롬브라우저가 사용하는 기본값 : 16px */
+        font-family: "Noto Sans KR", sans-serif;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>font</h2>
+
+    <!-- material icon -->
+    <span class="material-symbols-rounded ico-home"> home </span>
+    <span class="material-symbols-outlined"> delete </span>
+    <span class="material-symbols-outlined"> star </span>
+    <hr />
+    <!-- fontawesome -->
+    <i class="fa-solid fa-house"></i>
+    <i class="fa-solid fa-user"></i>
+    <i class="fa-regular fa-user"></i>
+    <style>
+      .fa-house {
+        color: red;
+        font-size: 5rem;
+      }
+      .svg-house {
+        color: blue;
+        transform: scale(5);
+      }
+    </style>
+
+    <svg class="svg-house" xmlns="http://www.w3.org/2000/svg" height="14" width="15.75" viewBox="0 0 576 512">
+      <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+      <path fill="#74C0FC" d="M575.8 255.5c0 18-15 32.1-32 32.1l-32 0 .7 160.2c0 2.7-.2 5.4-.5 8.1l0 16.2c0 22.1-17.9 40-40 40l-16 0c-1.1 0-2.2 0-3.3-.1c-1.4 .1-2.8 .1-4.2 .1L416 512l-24 0c-22.1 0-40-17.9-40-40l0-24 0-64c0-17.7-14.3-32-32-32l-64 0c-17.7 0-32 14.3-32 32l0 64 0 24c0 22.1-17.9 40-40 40l-24 0-31.9 0c-1.5 0-3-.1-4.5-.2c-1.2 .1-2.4 .2-3.6 .2l-16 0c-22.1 0-40-17.9-40-40l0-112c0-.9 0-1.9 .1-2.8l0-69.7-32 0c-18 0-32-14-32-32.1c0-9 3-17 10-24L266.4 8c7-7 15-8 22-8s15 2 21 7L564.8 231.5c8 7 12 15 11 24z" />
+    </svg>
+
+    <!-- font-family : 글꼴 -->
+    <p class="txt1">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci esse veniam provident neque repudiandae alias deleniti nemo necessitatibus aut nam ad molestiae sit voluptatem, placeat nihil repellendus cumque nulla saepe.</p>
+    <style>
+      .txt1 {
+        font-family: "Sixtyfour Convergence", sans-serif;
+        color: red;
+      }
+    </style>
+    <hr />
+    <!-- 폰트 사이즈 -->
+    <!-- 절대 사이즈 : px -->
+    <p class="txt2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, vitae?</p>
+    <style>
+      .txt2 {
+        font-size: 1.375rem;
+      }
+    </style>
+    <!-- 상대 사이즈 : rem, em -->
+    <p class="txt3">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Totam, rerum.</p>
+    <style>
+      .txt3 {
+        font-size: 1.25em;
+        color: blueviolet;
+      }
+    </style>
+
+    <ul class="list1">
+      <li>안녕하세요. 오다다 입니다.</li>
+      <li><b>프론트엔드</b> 공부하고 있어요.</li>
+      <li>난 고양이를 좋아해요.</li>
+      <li><b>쓸말이</b> 없어요.</li>
+    </ul>
+    <style>
+      .list1 li:first-child {
+        font-size: 1rem;
+      }
+      .list1 li:nth-child(2) {
+        /* 16px */
+        font-size: 0.875em;
+      }
+      .list1 li:nth-child(2) b {
+        /* 18px * 2 = 32px */
+        font-size: 2em;
+      }
+
+      /* 3번째 : 28px */
+      .list1 li:nth-child(3) {
+        font-size: 1.75em;
+      }
+      /* 4번째 : 기준 폰트 2배 사이즈 */
+      .list1 li:nth-child(4) {
+        /* 40px */
+        font-size: 2em;
+      }
+      .list1 li:nth-child(4) b {
+        /* 20 * 2 = 40 */
+        font-size: 2rem;
+      }
+    </style>
+
+    <!-- em : 부모를 기준으로 배수를 계산
+      ex) 부모 폰트 사이즈가 20px일 때, 1em = 20px
+        부모 폰트 사이즈가 20px일 때, 2em = 40px 
+    -->
+    <!-- rem : html, body 를 기준으로 배수를 계산
+     기준이 변경되지 않는다. -->
+
+    <!-- vw : viewport 기준 -->
+    <p class="txt3">안녕하세요.</p>
+    <style>
+      .txt3 {
+        font-size: 10vw;
+      }
+    </style>
+  </body>
+</html>

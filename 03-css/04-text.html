@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text | css</title>
+    <link rel="stylesheet" href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css" />
+  </head>
+  <body style="height: 300vh">
+    <h1>css</h1>
+    <h2>text</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit eligendi molestias voluptatum ratione magnam qui modi voluptatibus labore. Ex veritatis nulla optio sed quis exercitationem minima nesciunt quisquam labore provident.</p>
+
+    <style>
+      p {
+        color: blueviolet;
+        text-align: right;
+      }
+    </style>
+    <hr />
+
+    <div><img src="./images/youtube.png" alt="youtube" /> YouTube</div>
+    <style>
+      img {
+        vertical-align: middle;
+        margin-top: -5px;
+      }
+    </style>
+    <hr />
+
+    <a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores dolores, corrupti quas repellat possimus quasi.</a>
+    <style>
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: -0.4px;
+        line-height: 1.5;
+        white-space: nowrap;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <hr />
+    <button>
+      <span class="blind">회원가입</span>
+    </button>
+    <style>
+      .blind {
+        display: block;
+        text-indent: -9999px;
+      }
+      button {
+        width: 100px;
+        height: 100px;
+        background: pink;
+        overflow: hidden;
+      }
+      button::before {
+        content: "\f2f6";
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+      }
+    </style>
+  </body>
+</html>

@@ -1,0 +1,14 @@
+@import "fonts.css";
+
+.btn-primary {
+  background-color: red;
+  border: 1px solid red;
+}
+
+.modal-title {
+  font-size: 3rem;
+}
+
+.modal-dialog {
+  margin-top: 200px;
+}

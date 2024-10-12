@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>position | css</title>
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>position</h2>
+
+    <!-- 완벽한 센터링 -->
+    <div class="center-wrap">
+      <div class="center">center</div>
+    </div>
+    <style>
+      .center-wrap {
+        position: relative;
+        height: 600px;
+        background: yellow;
+      }
+      .center {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: 200px;
+        height: 200px;
+        transform: translate(-50%, -50%);
+        /* margin-top: -100px;
+        margin-left: -100px; */
+        background: skyblue;
+      }
+    </style>
+
+    <div class="rel">
+      <div class="sticky">나는 게시판 타이틀</div>
+    </div>
+    <style>
+      .sticky {
+        position: sticky;
+        top: 110px;
+        left: 0;
+        width: 100%;
+        height: 100px;
+        background: skyblue;
+      }
+    </style>
+
+    <!-- absolute -->
+    <div class="rel">
+      <div class="abs"></div>
+      <div class="abs2"></div>
+    </div>
+    <!-- <header>header</header> -->
+    <style>
+      body {
+        height: 200vh;
+      }
+      header {
+        /* fixed의 기준은 body */
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 1000;
+        width: 100%;
+        height: 100px;
+        background: pink;
+      }
+      .rel {
+        /* 기준 */
+        position: relative;
+        width: 500px;
+        height: 500px;
+        background: yellow;
+      }
+      .abs {
+        position: absolute;
+        top: 70px;
+        left: 160px;
+        z-index: 4;
+        width: 100px;
+        height: 100px;
+        background: blue;
+      }
+      .abs2 {
+        position: absolute;
+        top: 100px;
+        left: 200px;
+        width: 200px;
+        height: 200px;
+        background: greenyellow;
+      }
+    </style>
+  </body>
+</html>
