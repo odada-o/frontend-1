@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100..900&family=Sixtyfour+Convergence&display=swap"
+            rel="stylesheet"
+        />
+        />
+        <style>
+            /* reset */
+            html,
+            body {
+                font-size: 1rem;
+                font-family: 'Noto Sans KR', sans-serif;
+                /* 크롬브라우저가 사용하는 기본값  : 1rem */
+            }
+        </style>
+    </head>
+    <body>
+        <h1>css</h1>
+        <h2>font</h2>
+        <!-- font family : 글꼴 -->
+        <p class="txt1">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Harum unde fugiat molestiae repellat sequi
+            nesciunt corporis voluptates ad? Tenetur dolores eveniet repudiandae beatae laudantium odit expedita vel
+            sequi libero alias?
+        </p>
+        <style>
+            .txt1 {
+                font-family: 'Sixtyfour Convergence', sans-serif;
+            }
+        </style>
+        <!-- font size를 정하는 방법 -->
+        <!-- 절대 사이즈 : px 단위로 사용한다 -->
+        <!-- 상대 사이즈 : rem,em 을 사용한다 -->
+        <p class="txt2">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dolorum, eaque!</p>
+        <style>
+            .txt2 {
+                font-size: 20px;
+            }
+        </style>
+        <p class="txt3">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nemo, soluta.</p>
+        <style>
+            .txt3 {
+                font-size: 1.25em;
+                color: blueviolet;
+            }
+        </style>
+        <ul class="list1">
+            <li>안녕하세요</li>
+            <li><b>안녕히</b> 계세요</li>
+            <li>배가고픕니다</li>
+            <li><b>졸립니다</b>니다</li>
+            <style>
+                .list li:first-child {
+                    font-size: 16px;
+                }
+                .list1 li:nth-child(2) {
+                    font-size: 0.875em;
+
+                    .list1 li:nth-child(2) b {
+                        font-size: 4em;
+                    }
+                }
+                .list1 li:nth-child(3) {
+                    font-size: 1.75em;
+                }
+                .list1 li:nth-child(4) {
+                    /* 2.5rem */
+                    font-size: 4em;
+                }
+                .list1 li:nth-child(4) b {
+                    font-size: 32px;
+                }
+            </style>
+            <!-- em 부모를 기준으로 배수를 계산 -->
+            <!-- 부모 폰트 사이즈가 1.25rem 일 때,1em=1.25rem -->
+            <!-- 부모 폰트 사이즈가 1.25rem 일 때,2em=2.5rem -->
+            <!-- rem : html,body를 기준으로 배수를 계산 기준이 변경되지 않는다.-->
+        </ul>
+        <!-- vw : viewport 기준 -->
+        <p class="txt3">안녕 못 해요.</p>
+        <style>
+            .txt3 {
+                font-size: 10vw;
+            }
+        </style>
+    </body>
+</html>

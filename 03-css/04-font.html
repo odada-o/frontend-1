@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>text | css</title>
+  </head>
+  <body>
+    <h1>css</h1>
+    <h2>text</h2>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo provident non voluptate, consectetur, dolore enim earum officiis exercitationem vero corporis consequatur sit officia omnis? Necessitatibus iste ipsam vitae saepe itaque.</p>
+    <style>
+      p {
+        color: red;
+        text-align: right;
+      }
+    </style>
+    <div><img src="./images/youtube.png" alt="유튜브" />youtube</div>
+    <style>
+      img {
+        vertical-align: middle;
+        margin-top: -5px;
+      }
+    </style>
+    <a href="#">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates, velit quisquam delectus voluptatum perspiciatis enim vel non placeat, unde ea similique voluptas reprehenderit eos id voluptate porro. Tempora, voluptatem dicta!</a>
+    <style>
+      a {
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: -0.4px;
+        line-height: 10;
+        white-space: nowrap;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+    </style>
+    <hr />
+    <button>
+      <span class="blind">회원가입</span>
+    </button>
+    <hr />
+
+    <style>
+      .blind {
+        display: block;
+        text-indent: -9999px;
+      }
+      button {
+        width: 100px;
+        height: 100px;
+        background-color: pink;
+        text-indent: 0-9999px;
+        text-indent: -9999px;
+        overflow: hidden;
+      }
+      button::before {
+        content: '"\f2a3";';
+        font-family: "Line Awesome Free";
+        font-weight: 900;
+      }
+    </style>
+  </body>
+</html>
