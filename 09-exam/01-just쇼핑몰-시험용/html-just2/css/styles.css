@@ -1,0 +1,126 @@
+/* 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222328;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* 공통 스타일 */
+.blind {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+#wrap {
+  width: 1200px;
+  margin: auto;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+#gnb {
+  display: flex;
+  gap: 40px;
+}
+#gnb dt a {
+  display: flex;
+  align-items: center;
+  height: 100px;
+  background: lightblue;
+}
+#gnb dd {
+  display: none;
+}
+.slide {
+  overflow: hidden;
+}
+.slide ul {
+  display: flex;
+}
+.slide ul img {
+  display: block;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  padding-top: 20px;
+}
+
+main section {
+  width: 30%;
+}
+
+section .tit {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 공지사항 */
+.list-bbs li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list-bbs li::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: #000;
+}
+.list-bbs a {
+  display: block;
+  overflow: hidden;
+  width: 95%;
+  padding: 5px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+}
+
+.bnr {
+  width: 100%;
+}
+.list-goto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  row-gap: 22px;
+}
+.list-goto a {
+  display: block;
+  width: 170px;
+  height: 70px;
+  background: lightblue;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  border-top: 1px solid #eee;
+}
+
+footer .logo {
+  font-size: 20px;
+}
+footer address {
+  font-style: normal;
+}
+.sns a {
+  display: inline-block;
+  padding: 20px 10px;
+}
