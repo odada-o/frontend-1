@@ -5,24 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>핵심요약 | js</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-    <script src="./js/script.js"></script>
+    <!-- <script src="./js/script.js"></script> -->
+    <script defer src="./js/jquery.js"></script>
     <script>
       // #wrap 요소에 배경색을 빨간색으로 설정
     </script>
   </head>
   <body>
     <div id="wrap">
-      <button>버튼</button>
+      <button class="btn1">버튼</button>
       <div class="box">box</div>
+
+      <hr />
+      <button class="btn2">버튼2</button>
+      <div class="box2">box2</div>
     </div>
     <style>
       .box {
         display: flex;
         justify-content: center;
         align-items: center;
-        width: 300px;
-        height: 300px;
+        width: 100px;
+        height: 100px;
         background-color: yellow;
+      }
+      .box2 {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100px;
+        height: 100px;
+        background-color: blue;
       }
     </style>
 
