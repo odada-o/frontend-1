@@ -1,0 +1,220 @@
+/* 스타일 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: #222328;
+  list-style: none;
+  text-decoration: none;
+}
+
+/* 공통 스타일 */
+.blind {
+  font-size: 0;
+  line-height: 0;
+  text-indent: -9999px;
+}
+
+#wrap {
+  width: 1200px;
+  margin: auto;
+}
+
+header {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+}
+#gnb {
+  display: flex;
+  gap: 40px;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+#gnb::before {
+  content: "";
+  display: none;
+  position: absolute;
+  top: 100px;
+  right: 0;
+  width: 1200px;
+  height: 150px;
+  background: rgba(255, 255, 255, 1);
+}
+#gnb:hover::before {
+  display: block;
+}
+
+#gnb dl {
+  position: relative;
+  z-index: 10;
+  min-width: 110px;
+}
+
+/* 마우스 오버한 dl의 depth2만 열림 */
+/* #gnb dl:hover dd {}  */
+
+/* 모든 depth2가 열림 */
+#gnb:hover dl dd {
+  display: block;
+}
+#gnb dt a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+}
+#gnb dl:hover dt a {
+  color: red;
+}
+#gnb dl:hover dt a::after {
+  display: block;
+}
+
+#gnb dt a::after {
+  content: "";
+  display: none;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 5px;
+  background: red;
+}
+#gnb dd {
+  display: none;
+  padding: 5px 20px;
+  background: #fff;
+}
+.slide {
+  overflow: hidden;
+}
+.slide ul {
+  display: flex;
+}
+.slide ul img {
+  display: block;
+}
+
+main {
+  display: flex;
+  justify-content: space-between;
+  height: 200px;
+  padding-top: 20px;
+}
+
+main section {
+  width: 30%;
+}
+
+section .tit {
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+  border-bottom: 1px solid #eee;
+}
+
+/* 공지사항 */
+.list-bbs li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.list-bbs li::before {
+  content: "";
+  display: block;
+  width: 5px;
+  height: 5px;
+  background: #000;
+}
+.list-bbs a {
+  display: block;
+  overflow: hidden;
+  width: 95%;
+  padding: 5px 0;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  font-size: 18px;
+}
+
+.bnr {
+  width: 100%;
+}
+.list-goto {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-content: space-between;
+  row-gap: 22px;
+}
+.list-goto a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 70px;
+  background: lightblue;
+  border-radius: 10px;
+}
+
+footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 100px;
+  padding: 0 20px;
+  /* border-top: 1px solid #000; */
+  background: #eee;
+}
+
+footer .logo {
+  font-size: 20px;
+}
+footer address {
+  font-style: normal;
+}
+.sns a {
+  display: inline-block;
+  padding: 20px 10px;
+}
+
+#modal {
+  /* display: flex; */
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+#modal .modal-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 500px;
+  height: 500px;
+  padding: 50px;
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#modal .tit {
+  text-align: center;
+}
+#modal button {
+  display: block;
+  margin: auto auto 0 auto;
+  padding: 10px 20px;
+  background: #000;
+  color: #fff;
+  border-radius: 5px;
+  border: none;
+}
