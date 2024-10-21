@@ -1,3 +1,9 @@
+// loading 되면 bg-color를 lightblue로 변경
+$("body").css({
+  "background-color": "lightblue",
+  "font-size": "20px",
+});
+
 // btn을 클릭했을 때
 $(".btn1")
   .on("mouseenter", function () {
