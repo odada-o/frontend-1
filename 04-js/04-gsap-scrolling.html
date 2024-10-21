@@ -9,24 +9,26 @@
   </head>
   <body>
     <div class="space">gsap</div>
-    <section class="section2" style="height: 100vh">
-      <div class="box"></div>
+    <section class="section1">
+      gsap.to()
+      <div class="box1">box1</div>
     </section>
-    <section class="section" style="height: 100vh">
-      <div class="box2"></div>
+    <section class="section2">
+      gsap.timeline().to()
+      <div class="box2">box2</div>
     </section>
     <div class="space">gsap</div>
 
     <script>
       gsap.registerPlugin(ScrollTrigger);
 
-      gsap.to(".box2", {
+      gsap.to(".box1", {
         x: 400,
         y: 400,
         backgroundColor: "blue",
         duration: 2,
         scrollTrigger: {
-          trigger: ".section", // 객체 기준 범위
+          trigger: ".section1", // 객체 기준 범위
           start: "10% 30%", // 시작 위치
           end: "80% 60%", // 끝 위치
           scrub: true, // 스크롤 속도에 따라 애니메이션 속도 조절
@@ -44,31 +46,36 @@
         },
       });
 
-      tl.to(".box", {
+      tl.to(".box2", {
         x: 200,
         duration: 2,
       })
-        .to(".box", {
+        .to(".box2", {
           y: 200,
           duration: 2,
         })
-        .to(".box", {
+        .to(".box2", {
           rotation: 45,
           scale: 2,
         });
     </script>
     <style>
       .space {
-        height: 100vh;
+        height: 50vh;
       }
-      .box {
+      .section1 {
+        height: 100vh;
+        background-color: lightblue;
+      }
+      .box1 {
         width: 200px;
         height: 200px;
         margin-top: 100px;
         background: lightcoral;
       }
-      .section {
-        background-color: lightgray;
+      .section2 {
+        height: 100vh;
+        background-color: lightpink;
       }
       .box2 {
         width: 200px;
