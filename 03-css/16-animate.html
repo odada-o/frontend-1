@@ -9,10 +9,39 @@
   <body>
     <h1>css animation</h1>
     <div class="wrap">
-      <div class="box box1"></div>
-      <div class="box box2"></div>
+      <div class="box box1">box1</div>
+      <div class="box box2">box2</div>
     </div>
     <style>
+      @keyframes ani-box1 {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        25% {
+          top: 0;
+          left: 400px;
+        }
+        50% {
+          top: 400px;
+          left: 400px;
+        }
+        75% {
+          top: 400px;
+          left: 0;
+        }
+        100% {
+          top: 0;
+          left: 0;
+        }
+      }
+      .box1 {
+        animation: ani-box1 3s -1s infinite alternate ease-in-out;
+        position: absolute;
+        top: 0;
+        left: 0;
+        background: lightgreen;
+      }
       .wrap {
         position: relative;
         width: 500px;
@@ -23,11 +52,20 @@
         width: 100px;
         height: 100px;
       }
-      .box1 {
-        background: lightgreen;
-      }
       .box2 {
+        position: absolute;
         background: lightcoral;
+        animation: ani-box2 2s forwards;
+      }
+      @keyframes ani-box2 {
+        0% {
+          top: 0;
+          left: 0;
+        }
+        100% {
+          top: 400px;
+          left: 400px;
+        }
       }
     </style>
   </body>
