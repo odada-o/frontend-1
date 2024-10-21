@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>aos | js</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="space">aos 실습</div>
+      <div class="item" data-aos="fade-up" data-aos-offset="500" data-aos-once="true">item</div>
+      <div class="item" data-aos="fade-down" data-aos-delay="300">item</div>
+      <div class="item" data-aos="fade-left">item</div>
+      <div class="item" data-aos="fade-right">item</div>
+
+      <section id="section" class="space"></section>
+
+      <div class="circle" data-aos="fade-right" data-aos-anchor="#section" data-aos-anchor-placement="top-center" data-aos-once="false">circle</div>
+    </div>
+    <script>
+      AOS.init({
+        once: true,
+      });
+    </script>
+    <style>
+      .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        min-height: 200vh;
+      }
+      .space {
+        width: 100%;
+        height: 100vh;
+        background: lightcoral;
+      }
+      .item {
+        width: 200px;
+        height: 200px;
+        background: lightskyblue;
+      }
+      .circle {
+        position: fixed;
+        /* top: 50%;
+        left: 0;
+        transform: translateY(-50%); */
+        width: 200px;
+        height: 200px;
+        background: blueviolet;
+        border-radius: 50%;
+      }
+    </style>
+  </body>
+</html>
