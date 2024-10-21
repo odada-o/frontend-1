@@ -8,21 +8,31 @@
   <body>
     <div class="item" style="background-color: lightpink">아이템</div>
     <script>
-      // .item 의 배경색을 lightpink로 변경
-      document.querySelector(".item").style.backgroundColor = "lightblue";
+      const item = document.querySelector(".item");
 
-      document.querySelector(".item").style.fontSize = "5rem";
+      item.style.backgroundColor = "lightblue";
+      item.style.fontSize = "5rem";
+      item.style.transform = "translate(100px, 100px) scale(1.5) rotate(45deg)";
 
-      // x, y 좌표를 100, 100으로 이동
-      // scale 1.5배
-      // rotate 45도
-      document.querySelector(".item").style.transform = "translate(100px, 100px) scale(1.5) rotate(45deg)";
+      // 스크롤 이벤트
+      // 윈도우를 스크롤 했을 때
+      window.addEventListener("scroll", function () {
+        const scrolled = window.scrollY;
+
+        console.log("scroll");
+        console.log("스크롤 양 " + scrolled + "px");
+        console.log(`스크롤 값 : ${scrolled}px`);
+      });
     </script>
     <style>
+      body {
+        height: 200vh;
+      }
       .item {
         width: 300px;
         height: 300px;
         background-color: lightgreen;
+        transition: all 1s;
       }
     </style>
   </body>
