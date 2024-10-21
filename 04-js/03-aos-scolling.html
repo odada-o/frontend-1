@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <style>
+    .container{
+      display: flex;
+      flex-direction: column;
+      height: 200vh;
+      gap:30px;
+      align-items: center;
+    }
+    .space{
+      width:100%;
+      height: 100vh;
+      background-color: lightcoral;
+    }
+    .item{
+      width:200px;
+      height:200px;
+      background-color: lightblue;
+    }
+    .square{
+      width : 200px;
+      height : 200px;
+      border-radius: 50%;
+      background-color: tomato;
+      position: fixed;
+      /* top:50%;
+      left:0;
+      transform: translateY(-50%); */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="space">aos 실습</div>
+    <div class="item" data-aos="fade-up">item1</div>
+    <div class="item" data-aos="fade-up">item1</div>
+    <div class="item" data-aos="fade-up">item1</div>
+    <div class="item" data-aos="fade-up" data-aos-delay="1000">item4</div>
+    <div class="item" data-aos="fade-right" data-aos-delay="1000">item4</div>
+    <div class="item" data-aos="flip-up" data-aos-delay="2000">item4</div>
+
+    <section id="section" class="space"></section>
+    <div class="square" data-aos="fade-right" data-aos-anchor="section" data-aos-anchor-placement="top-center"></div>
+    </div>
+  <script>
+    AOS.init({
+      once:false,
+      offset: 200,
+      duration: 600,
+      easing: 'ease-in-sine',
+      delay: 100,
+    });
+  </script>
+</body>
+</html>
