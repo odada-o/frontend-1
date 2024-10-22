@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Comfortaa", sans-serif;
 }
 
 .box {
@@ -12,21 +13,31 @@
 }
 
 .green {
-  background-color: green;
+  background-color: #00ff9c;
 }
 
 .orange {
-  background-color: orange;
+  background-color: #feffa7;
 }
 
 .yellow {
-  background-color: yellow;
+  background-color: #ffe700;
 }
 
 .intro {
+  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.intro .txt {
+  position: absolute;
+  top: 130px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  font-size: 6rem;
+  font-weight: 300;
+  letter-spacing: -7.5px;
 }/*# sourceMappingURL=style.css.map */
