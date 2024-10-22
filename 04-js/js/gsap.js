@@ -7,7 +7,7 @@ var tl = gsap.timeline({
     start: "top 0",
     end: "+=500",
     scrub: 1,
-    markers: true,
+    // markers: true,
   },
 });
 
