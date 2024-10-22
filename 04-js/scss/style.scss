@@ -8,6 +8,7 @@
   display: block;
   width: 100px;
   height: 100px;
+  border-radius: 20px;
 }
 
 .green {
@@ -18,4 +19,12 @@
 }
 .yellow {
   background-color: yellow;
+}
+
+.intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
 }
