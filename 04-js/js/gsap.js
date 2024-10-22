@@ -29,3 +29,24 @@ gsap.to(".grow", {
     // markers: true,
   },
 });
+
+// header
+// 윈도우가 스크롤 됐을 때
+window.addEventListener(
+  "scroll",
+  _.throttle(function () {
+    // gsap을 이용해서 #header의 tanslateY 값을 -100%로 설정
+
+    const scrolled = window.scrollY;
+    console.log(`스크롤 값 : ${scrolled}`);
+
+    // 만약 y축 스크롤 값(scrolled)이 80보다 크다면
+    if (scrolled > 80) {
+      gsap.to("#header", { yPercent: -100, duration: 0.3 });
+      gsap.to("#to-top", { x: -70, duration: 0.3 });
+    } else {
+      gsap.to("#header", { yPercent: 0, duration: 1 });
+      gsap.to("#to-top", { x: 0, duration: 0.3 });
+    }
+  })
+);
