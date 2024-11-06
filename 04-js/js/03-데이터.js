@@ -67,3 +67,21 @@ console.log(users[0].name);
 console.log(users[0]["name"]);
 
 // 6. function (함수)
+// 함수 선언
+function add(a, b) {
+  console.log(a + b);
+}
+add(1, 3); // 함수 실행
+
+// 함수 표현
+const add2 = function (a, b) {
+  console.log(a + b);
+};
+// 함수 실행
+add2(1, 2);
+
+// 화살표 함수 (es6+)
+const add3 = (a, b) => {
+  console.log(a + b);
+};
+add3(1, 2);
