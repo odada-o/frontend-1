@@ -40,3 +40,30 @@ console.log(user.name); // 가을
 console.log(user.age); // 2
 // 가을이는 2살입니다.
 console.log(`${user.name}이는 ${user.age}살입니다.`);
+
+const userA = {
+  name: "겨울",
+  age: 2,
+};
+const userB = {
+  name: "odada",
+  age: 100,
+  parent: userA,
+};
+
+console.log(userB);
+// 점 표기법
+console.log(userB.parent.name); // 겨울
+// 대괄호 표기법
+console.log(userB["parent"]["name"]); // 겨울
+
+console.log(userA.name, userA.age); // 겨울 2
+// 겨울이는 2살입니다.
+console.log(`${userA.name}이는 ${userA.age}살입니다.`);
+
+const users = [userA, userB];
+console.log(users);
+console.log(users[0].name);
+console.log(users[0]["name"]);
+
+// 6. function (함수)
