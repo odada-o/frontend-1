@@ -161,7 +161,7 @@ for (let key in user3) {
 
 // while문
 // while (조건) {실행문}
-let i = 1;
+let i = 1; // 전역 변수
 let sum = 0;
 
 while (i <= 10) {
@@ -181,3 +181,11 @@ console.log(`sum : ${sum}, i : ${i}`);
 // i=8: sum = 28+8 = 36
 // i=9: sum = 36+9 = 45
 // i=10: sum = 45+10 = 55
+
+// do while문
+
+let j = 0;
+do {
+  console.log(j);
+  j++;
+} while (j < 10);
