@@ -105,3 +105,79 @@ function header(type) {
 
 console.log(header("type1")); // 타입1 header 출력
 console.log(header("type2")); // 타입2 header 출력
+
+// if문으로 변경
+function header2(type) {
+  if (type === "type1") return "타입1 ddddd 출력";
+  if (type === "type2") return "타입2 ddddd 출력";
+  return "타입3 ddddd 출력";
+}
+console.log(header2("type1"), header2("type2"), header2("type3"));
+
+// 반복문
+// for문
+// for (초기값; 조건; 증감) {실행문}
+
+// 콘솔창에 0부터 9까지 출력
+for (let i = 0; i < 10; i++) {
+  console.log(i);
+}
+
+// 9부터 0까지 출력
+for (let i = 9; i > -1; i -= 2) {
+  if (i < 4) {
+    break;
+  }
+  console.log(i);
+}
+
+// continue문
+// 9부터 1까지 출력
+for (let i = 9; i > 0; i--) {
+  if (i % 2 === 0) {
+    continue;
+  }
+  console.log(`i : ${i}`);
+}
+
+// for of문 (배열)
+const animals = ["dog", "cat", "fish"];
+
+for (let animal of animals) {
+  console.log(`내가 좋아하는 동물은? ${animal}`);
+}
+
+// for in문 (객체)
+const user3 = {
+  name: "겨울",
+  age: 2,
+  city: "seoul",
+};
+
+for (let key in user3) {
+  console.log(key);
+  console.log(user3[key]);
+}
+
+// while문
+// while (조건) {실행문}
+let i = 1;
+let sum = 0;
+
+while (i <= 10) {
+  sum += i; // sum = sum + i;
+  i++;
+}
+
+console.log(`sum : ${sum}, i : ${i}`);
+
+// i=1: sum = 0+1 = 1
+// i=2: sum = 1+2 = 3
+// i=3: sum = 3+3 = 6
+// i=4: sum = 6+4 = 10
+// i=5: sum = 10+5 = 15
+// i=6: sum = 15+6 = 21
+// i=7: sum = 21+7 = 28
+// i=8: sum = 28+8 = 36
+// i=9: sum = 36+9 = 45
+// i=10: sum = 45+10 = 55
