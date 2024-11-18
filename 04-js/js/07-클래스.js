@@ -113,6 +113,33 @@ class OrderCoffee {
   order() {
     console.log(`${this.name}은 ${this.price}원 입니다.`);
   }
+
+  // 메소드2
+  making() {
+    console.log(`${this.name}를 만들고 있습니다.`);
+  }
+
+  // 메소드3
+  made() {
+    console.log(`${this.name}가 완성되었습니다.`);
+  }
 }
 
-new OrderCoffee ('아메리카노', 3500).order(); // 아메리카노는 3500원 입니다.
+const ame3 = new OrderCoffee("아메리카노", 3500);
+
+// 아메리카노는 3500원 입니다.
+ame3.order(); 
+// 아메리카노를 만들고 있습니다.
+ame3.making();
+// 아메리카노가 완성되었습니다.
+ame3.made();
+
+// 라떼로...
+const latte3 = new OrderCoffee("라떼", 4000);
+
+// 라떼는 4000원 입니다.
+latte3.order();
+// 라떼를 만들고 있습니다.
+latte3.making();
+// 라떼가 완성되었습니다.
+latte3.made();
