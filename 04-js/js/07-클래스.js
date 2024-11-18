@@ -69,34 +69,50 @@ console.log(ame2);
 console.log(latte2);
 
 // 클래스 문법
+// class OrderCoffee {
+//   // 생성자 함수
+//   constructor(name, price) {
+//     this.name = name;
+//     this.price = price;
+//   }
+
+//   // 메소드
+//   printMenu() {
+//     console.log(`${this.name}는 ${this.price}원 입니다.`);
+//   }
+
+//   making() {
+//     console.log(`${this.name}를 만들고 있습니다.`);
+//   }
+
+//   made() {
+//     console.log(`${this.name}가 완성되었습니다.`);
+//   }
+// }
+
+// const ame3 = new OrderCoffee("아메리카노", 3500);
+// const latte3 = new OrderCoffee("라떼", 4000);
+
+// ame3.printMenu();
+// ame3.making();
+// ame3.made();
+
+// latte3.printMenu();
+// latte3.making();
+// latte3.made();
+
+// 클래스 함수란?
 class OrderCoffee {
-  // 생성자 함수
+  // 생성자 함수 (객체를 생성)
   constructor(name, price) {
     this.name = name;
     this.price = price;
   }
 
   // 메소드
-  printMenu() {
-    console.log(`${this.name}는 ${this.price}원 입니다.`);
-  }
-
-  making() {
-    console.log(`${this.name}를 만들고 있습니다.`);
-  }
-
-  made() {
-    console.log(`${this.name}가 완성되었습니다.`);
+  order() {
+    console.log(`${this.name}은 ${this.price}원 입니다.`);
   }
 }
 
-const ame3 = new OrderCoffee("아메리카노", 3500);
-const latte3 = new OrderCoffee("라떼", 4000);
-
-ame3.printMenu();
-ame3.making();
-ame3.made();
-
-latte3.printMenu();
-latte3.making();
-latte3.made();
+new OrderCoffee ('아메리카노', 3500).order(); // 아메리카노는 3500원 입니다.
