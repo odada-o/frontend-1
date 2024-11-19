@@ -143,3 +143,28 @@ latte3.order();
 latte3.making();
 // 라떼가 완성되었습니다.
 latte3.made();
+
+// 클래스 상속
+class SpecialCoffee extends OrderCoffee {
+
+  // 생성자 함수
+  constructor (name, price, character) {
+    super(name, price);
+    this.character = character;
+  }
+
+  // 메소드
+  order() {
+    console.log(`${this.character} ${this.name}는 ${this.price + 1500}원 입니다.`);
+  }
+
+  // 메소드2
+  limited() {
+    console.log(`${this.character} ${this.name}는 11월 한정판매합니다.`);
+  }
+}
+
+const ameSpecial = new SpecialCoffee('아메리카노', 3500, '미니언즈');
+
+ameSpecial.order();
+ameSpecial.limited();
