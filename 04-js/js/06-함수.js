@@ -100,3 +100,72 @@ const e = (x, y) => {
 };
 const f = () => ({ name: "윈터" });
 const g = () => [1, 2, 3];
+
+// 3초 후에 콘솔창
+// const timeOut = setTimeout(() => {
+//   console.log('3초 뒤에 실행됩니다.')
+// }, 3000)
+
+// document.querySelector(".btn1").addEventListener("click", () => {
+//   console.log('버튼이 클릭되었습니다.')
+//   clearTimeout(timeOut);
+// })
+
+
+// // setInterval
+// const timer = setInterval(() => {
+//   console.log('3초마다 실행됩니다.')
+// }, 3000)
+
+// // clearInterval
+// document.querySelector(".btn2").addEventListener("click", function() {
+//   console.log('취소취소취소');
+//   clearInterval(timer);
+// })
+
+// 콜백 함수
+// 원하는 시점에 호출되도록 설정할 수 있는 함수
+
+const aa = (callback) => {
+  // b함수를 실행
+  callback();
+  console.log('aa')
+}
+const bb = () => {console.log('b')}
+
+aa(bb);
+
+
+// this
+
+// 일반 함수 this
+// 일반 함수: 호출 위치에서 this 가 결정된다.
+// 화살표 함수: 자신이 선언된 함수 범위에서 this가 결정된다.
+
+function userss () {
+  this.firstName = '윈터';
+  this.lastName = '이';
+
+  return {
+    getFullName: () => {
+      return `${this.firstName} ${this.lastName}`;
+    }
+  }
+}
+
+const user2 = userss();
+console.log(user2.getFullName()); // 윈터 이
+
+const obj2 = {
+  firstName: '윈터',
+  lastName: '이',
+  // 메서드
+  // fullName() {
+  //   return `${this.lastName} ${this.firstName}`;
+  // }
+  fullName: () => {
+    return `${this.lastName} ${this.firstName}`;
+  }
+}
+
+console.log(obj2.fullName()); // 이윈터

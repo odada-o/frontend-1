@@ -136,6 +136,36 @@ const users2 = [
   { name: "둘리", age: 6 },
 ];
 
-users2.map(function(item){
-  console.log(item.name);
-})
+users2.map(function (item) {
+  console.log(item)
+});
+
+const newUsers = users2.map((item) => ({...item, email: null}));
+
+console.log(newUsers);
+
+console.log(arr.pop())
+
+console.log(arr.push(4, 5, 6));
+console.log(arr);
+
+const users4 = [
+  { name: "홍길동", age: 36 },
+  { name: "고길동", age: 12 },
+  { name: "둘리", age: 6 },
+];
+// 총 나이 합계 (reduce)
+const totalAge = users4.reduce(
+  function (total, currentValue,) {
+    return total + currentValue.age;
+  }, 0
+);
+
+console.log(totalAge);
+
+// 평균 나이 구하기
+const avgAge = (totalAge / users4.length).toFixed();
+console.log(avgAge);
+
+const arr2 = [1, 2, 3, 4, 5];
+console.log(arr2.slice(0, 3));
