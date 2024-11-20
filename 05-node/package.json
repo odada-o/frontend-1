@@ -1,0 +1,16 @@
+{
+  "name": "node-study",
+  "version": "1.0.0",
+  "description": "노드 공부하고 있음",
+  "scripts": {
+    "dev": "parcel ./index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "swiper": "^11.1.14"
+  },
+  "devDependencies": {
+    "parcel": "^2.12.0"
+  }
+}
