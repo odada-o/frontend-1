@@ -13,11 +13,12 @@ const server = http.createServer((req, res) => {
   // query = { category: 'shoes', color: 'black', size: '260' }
 
   // 상품 검색 처리
-  if (query.category || query.color) {
+  if (query.category || query.color || query.size) {
     const result = `
       <h2>검색결과</h2>
       <p>카테고리: ${query.category}</p>
-      <p>카테고리: ${query.color}</p>
+      <p>색상: ${query.color}</p>
+      <p>사이즈: ${query.size}</p>
     `;
     res.writeHead(200, { "Content-Type": "text/html; charset=utf-8" });
     res.end(result);
